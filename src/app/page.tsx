@@ -2,15 +2,22 @@ import Image from "next/image";
 import Saudacao from "../components/saudacao";
 import Contato from "../components/contato";
 import CPF from "../components/cpf";
-import FormCadastroUser from "../components/formCadastroUser";
+import LinkBotao from "../components/linkBotao";
+import Link from "next/link";
+import Navbar from "../components/navBar";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Navbar />
         <Saudacao nome="Filipe" />
         <Contato telefone="(48)91999876"/>
         <CPF cpf="123.456.789-00"/>
-        <FormCadastroUser />
+{/*         
+        <Link href="/user">
+            Cadastrar usuário
+        </Link> */}
+
         <Image
           className="dark:invert"
           src="/next.svg"
